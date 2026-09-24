@@ -1,0 +1,2 @@
+# 배포 EXE를 만들 때만 설치한다. 사용자 PC에는 Python 설치가 필요 없다.
+pyinstaller==6.20.0

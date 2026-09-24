@@ -1,0 +1,9 @@
+# 운영체제별 줄바꿈 변환으로 번역 JSON의 검증 해시가 바뀌지 않게 한다.
+* text=auto eol=lf
+translation/final/*.json -text
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+*.exe binary
+*.dll binary
+*.ttf binary
+*.png binary

@@ -1,0 +1,24 @@
+{
+	"translation_status": "codex-reviewed-final",
+	"files": {
+		"translation/final/messages.base.ko.json": "96eb46caa025bf69b4ef1bedec96c7a4427eb203611a285134e648719eadb841",
+		"translation/final/messages.dlc.ko.json": "391139979a3fbe63020fdc2dcd7c4fa7234d6136fda168813505a09d7c2b598d",
+		"translation/final/sequences.base.json": "2611edd699989d5e57acb814ab93fe1b616860bf00ed5e94e16416a320e5025b",
+		"translation/final/sequences.dlc.json": "523996c78ca8ea38b1911cd00085a89abe05c715b471f608bd9ca53ecc1d22c7",
+		"tools/PJADV_Pack_V2_Editor.exe": "0d55e615e90b5a063977fba5e1dd7c794ad624e9125ad0a95cfc50faecc229a3",
+		"tools/PJADV_Text_Editor.exe": "645a0e42d3d2e2bd966958ae858683cc3263ff436ddd0655ac18f209b5788794",
+		"tools/PJADV_TextDataDat_Cryptor.exe": "f5f4dbaa14b3b0701d844325236ae777a953e9ac8444665c5cc7955b0e40ba5d",
+		"runtime/fonts/Paperlogy-6SemiBold.ttf": "ca92034a1c4602a57c55434dfdbf8428a0bb88ac84a99a5effec1a41f0118127",
+		"runtime/mama_sis_font.dll": "8021ac0beac2de2ba0934ddf13415e3aa8b6a63cea3ecfe98834d3edc74a20e6",
+		"runtime/MamaSisKoreanLauncher.exe": "02695227397e1c3af20f4ac5a92293d09b0222ff6fa3e970d7ee7d79d14bf73b"
+	},
+	"original_game": {
+		"archive.dat": "0223d487b6ed14580f80fc0db8f1550fc14867892ed911d24ce21945568b41cc",
+		"appenddlc.dat": "acc8f05a7709b9def35061538d3caeab5567fb6c37c07b353ce382bd71e3dccf",
+		"Mamashisu.exe": "e30342464d363726de997d0ac3023a7b10815ba1f8bde5a03dcaa4be8bdc5474"
+	},
+	"expected_outputs": {
+		"archive.dat": "5669736b7c571cdcce1cb643e83a5794ffdd5a7349dccc50102e6646d0577fec",
+		"appenddlc.dat": "49f9c75e69888c95c5c86c57daea851c47f4b51261047804e716a11270c8f2a7"
+	}
+}

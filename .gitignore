@@ -1,0 +1,25 @@
+# 로컬 빌드·배포 산출물
+/build/
+/dist/
+/output/
+/runtime/*.exe
+/runtime/*.dll
+*.obj
+*.exp
+*.lib
+*.pdb
+*.ilk
+*.spec
+
+# Python 캐시·개발 환경
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# 실행 로그·임시 파일
+*.log
+*.tmp
+
+# tools의 EXE와 runtime/fonts의 TTF는 빌드 입력이므로 포함한다.

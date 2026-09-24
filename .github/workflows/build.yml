@@ -1,0 +1,49 @@
+name: 한글 패치 릴리즈 빌드
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-2022
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: 배포 도구 설치
+        run: python -m pip install -r requirements-build.txt
+      - name: 32비트 게임용 DLL과 런처 컴파일
+        shell: pwsh
+        run: |
+          ./font_hook/build.ps1
+          ./font_hook/build_launcher.ps1
+      - name: 자동 패치 실행 파일과 ZIP 생성
+        run: python scripts/make_release.py
+      - name: 빌드 결과 보관
+        uses: actions/upload-artifact@v4
+        with:
+          name: MamaSis-KoreanPatch-Setup
+          path: dist/MamaSis-KoreanPatch-Setup.zip
+      # v로 시작하는 태그를 올린 경우에만 GitHub 릴리즈를 만든다.
+      - name: 태그 릴리즈에 ZIP 등록
+        if: startsWith(github.ref, 'refs/tags/')
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create $env:GITHUB_REF_NAME dist/MamaSis-KoreanPatch-Setup.zip --verify-tag --title $env:GITHUB_REF_NAME --notes-file INSTALL.txt
